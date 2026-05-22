@@ -4,7 +4,6 @@
 
 # ControlCar
 
-
 ## Overview
 
 **ControlCar** is a B2B multi-tenant SaaS platform designed to modernize and optimize the management of automotive repair shops and mechanical workshops.
