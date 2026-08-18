@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  🇺🇸 English | 🇧🇷 <a href="./README.pt-BR.md">Português</a>
+  English | <a href="./README.pt-BR.md">Português</a>
 </p>
 
 <h1 align="center">
@@ -26,19 +26,19 @@
 
 ---
 
-## 📋 Overview
+## Overview
 
 **AutoFlow Pro** is a B2B multi-tenant SaaS platform designed to transform auto shop and automotive center management. With a modern and scalable architecture, the system offers:
 
-- ✅ **Complete data isolation** between tenants
-- ✅ **Responsive and intuitive** interface
-- ✅ **Documented RESTful API**
-- ✅ **Production-ready architecture**
-- ✅ **Infrastructure as Code**
+- **Complete data isolation** between tenants
+- **Responsive and intuitive** interface
+- **Documented RESTful API**
+- **Production-ready architecture**
+- **Infrastructure as Code**
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 ### Multi-Tenant SaaS Architecture
 - Tenant isolation via subdomain-based routing
@@ -72,7 +72,7 @@
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 
@@ -134,7 +134,7 @@ frontend/
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -163,7 +163,7 @@ frontend/
 
 ---
 
-## 🔐 Multi-Tenant Architecture
+## Multi-Tenant Architecture
 
 AutoFlow Pro implements a robust tenant isolation strategy:
 
@@ -176,7 +176,7 @@ AutoFlow Pro implements a robust tenant isolation strategy:
 
 ---
 
-## 💾 Database
+## Database
 
 The system uses **PostgreSQL** as the primary database:
 
@@ -193,7 +193,7 @@ db/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -234,7 +234,7 @@ Password: (defined in .env)
 
 ---
 
-## 📝 Environment Variables
+## Environment Variables
 
 ```env
 # Database
@@ -260,23 +260,23 @@ NEXT_PUBLIC_APP_NAME=AutoFlow Pro
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 Complete documentation is available in the `/docs` directory:
 
-- ✅ Feasibility Study
-- ✅ Requirements Gathering
-- ✅ Use Cases
-- ✅ User Stories
-- ✅ Product Backlog
-- ✅ Scrum Setup
-- ✅ Database Modeling
-- ✅ Traceability Matrix
-- ✅ Business Model Canvas
+- Feasibility Study
+- Requirements Gathering
+- Use Cases
+- User Stories
+- Product Backlog
+- Scrum Setup
+- Database Modeling
+- Traceability Matrix
+- Business Model Canvas
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Backend tests
@@ -290,19 +290,19 @@ npm test
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a private project for internal and academic use.
 
 ---
 
-## 📄 License
+## License
 
 **Private Project** - Internal and academic use only.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Developed as a software engineering project with solid foundations in:
 
