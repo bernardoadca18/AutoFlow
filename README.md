@@ -15,83 +15,83 @@
 </h1>
 
 <p align="center">
-  <strong>Plataforma SaaS Multi-Tenant Profissional para Gestão de Oficinas Mecânicas</strong>
+  <strong>Professional Multi-Tenant SaaS Platform for Auto Shop Management</strong>
 </p>
 
 <p align="center">
-  Sistema completo para modernização e otimização de gestão de oficinas automotivas,
+  A complete system for modernizing and optimizing automotive shop management,
   <br />
-  com foco em escalabilidade, segurança e eficiência operacional.
+  focused on scalability, security, and operational efficiency.
 </p>
 
 ---
 
-## 📋 Visão Geral
+## 📋 Overview
 
-**AutoFlow Pro** é uma plataforma B2B multi-tenant SaaS projetada para transformar a gestão de oficinas mecânicas e centros automotivos. Com uma arquitetura moderna e escalável, o sistema oferece:
+**AutoFlow Pro** is a B2B multi-tenant SaaS platform designed to transform auto shop and automotive center management. With a modern and scalable architecture, the system offers:
 
-- ✅ **Isolamento total de dados** entre tenants
-- ✅ **Interface responsiva** e intuitiva
-- ✅ **API RESTful** documentada
-- ✅ **Arquitetura preparada para produção**
-- ✅ **Infraestrutura como código**
+- ✅ **Complete data isolation** between tenants
+- ✅ **Responsive and intuitive** interface
+- ✅ **Documented RESTful API**
+- ✅ **Production-ready architecture**
+- ✅ **Infrastructure as Code**
 
 ---
 
-## 🚀 Funcionalidades Principais
+## 🚀 Key Features
 
 ### Multi-Tenant SaaS Architecture
-- Isolamento de tenants via subdomain-based routing
-- Separação lógica de dados entre oficinas
-- Provisionamento automatizado de novos tenants
-- Controle de assinaturas e planos
+- Tenant isolation via subdomain-based routing
+- Logical data separation between shops
+- Automated provisioning of new tenants
+- Subscription and plan control
 
-### Gestão de Oficina
-- Cadastro e gerenciamento de clientes
-- Registro e rastreamento de veículos
-- Ciclo de vida completo de Ordens de Serviço (OS)
-- Dashboard com métricas em tempo real
+### Shop Management
+- Customer registration and management
+- Vehicle registration and tracking
+- Complete Service Order (SO) lifecycle
+- Dashboard with real-time metrics
 
 ### Control Plane
-- Administração centralizada de assinantes
-- Gestão de planos e cobranças
-- Provisionamento de novos ambientes
-- Monitoramento de tenants
+- Centralized subscriber administration
+- Plan and billing management
+- New environment provisioning
+- Tenant monitoring
 
-### Autenticação & Segurança
-- Fluxos de login seguros
-- Estrutura de acesso administrativo
-- Workflows operacionais protegidos
+### Authentication & Security
+- Secure login flows
+- Administrative access structure
+- Protected operational workflows
 - JWT Authentication
 
-### Produtividade Operacional
-- Interface rápida e responsiva
-- Navegação focada no negócio
-- Busca e filtros avançados
-- Notificações em tempo real
+### Operational Productivity
+- Fast and responsive interface
+- Business-focused navigation
+- Advanced search and filters
+- Real-time notifications
 
 ---
 
-## 🛠️ Stack Tecnológica
+## 🛠️ Technology Stack
 
 ### Backend
 
-| Tecnologia | Versão | Descrição |
-|------------|--------|-----------|
-| **Python** | 3.11+ | Linguagem principal |
-| **Django** | 5.2 | Framework web |
-| **Django REST Framework** | 3.14 | API RESTful |
-| **PostgreSQL** | 16 | Banco de dados relacional |
-| **Prisma** | 5.22 | ORM para Node.js API |
+| Technology | Version | Description |
+|------------|---------|-------------|
+| **Python** | 3.11+ | Main language |
+| **Django** | 5.2 | Web framework |
+| **Django REST Framework** | 3.14 | RESTful API |
+| **PostgreSQL** | 16 | Relational database |
+| **Prisma** | 5.22 | ORM for Node.js API |
 
-#### Módulos Backend
+#### Backend Modules
 ```
 backend/
 ├── system/           # Django Control Plane
-│   ├── tenants/      # Gestão de tenants
-│   ├── accounts/     # Autenticação e usuários
-│   └── control_plane/ # Configurações centrais
-└── app/              # Node.js API Principal
+│   ├── tenants/      # Tenant management
+│   ├── accounts/     # Authentication and users
+│   └── control_plane/ # Central settings
+└── app/              # Main Node.js API
     └── src/
         ├── server.js
         └── prisma/
@@ -99,22 +99,22 @@ backend/
 
 ### Frontend
 
-| Tecnologia | Versão | Descrição |
-|------------|--------|-----------|
-| **Next.js** | 16.0 | Framework React |
-| **React** | 19.2 | Biblioteca UI |
-| **TypeScript** | 5.x | Tipagem estática |
-| **Tailwind CSS** | 4.x | Framework CSS |
-| **Lucide React** | 0.555 | Ícones SVG |
+| Technology | Version | Description |
+|------------|---------|-------------|
+| **Next.js** | 16.0 | React framework |
+| **React** | 19.2 | UI library |
+| **TypeScript** | 5.x | Static typing |
+| **Tailwind CSS** | 4.x | CSS framework |
+| **Lucide React** | 0.555 | SVG icons |
 
-#### Estrutura Frontend
+#### Frontend Structure
 ```
 frontend/
 ├── app/
-│   ├── os/           # Ordens de Serviço
-│   ├── clients/      # Gestão de Clientes
-│   ├── login/        # Autenticação
-│   ├── components/   # Componentes reutilizáveis
+│   ├── os/           # Service Orders
+│   ├── clients/      # Client Management
+│   ├── login/        # Authentication
+│   ├── components/   # Reusable components
 │   │   ├── ui/       # Design System
 │   │   └── Sidebar.tsx
 │   └── src/
@@ -123,18 +123,18 @@ frontend/
 └── package.json
 ```
 
-### Infraestrutura
+### Infrastructure
 
-| Serviço | Tecnologia |
+| Service | Technology |
 |---------|------------|
-| **Containerização** | Docker |
-| **Orquestração** | Docker Compose |
+| **Containerization** | Docker |
+| **Orchestration** | Docker Compose |
 | **Database Admin** | pgAdmin 4 |
-| **Reverse Proxy** | Nginx (produção) |
+| **Reverse Proxy** | Nginx (production) |
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -165,91 +165,91 @@ frontend/
 
 ## 🔐 Multi-Tenant Architecture
 
-O AutoFlow Pro implementa uma estratégia robusta de isolamento de tenants:
+AutoFlow Pro implements a robust tenant isolation strategy:
 
-- **Subdomain-based routing** para identificação de tenants
-- **Separação lógica** de dados entre oficinas
-- **Flow de provisionamento** dedicado
-- **Controle de acesso** baseado em assinatura
+- **Subdomain-based routing** for tenant identification
+- **Logical separation** of data between shops
+- **Dedicated provisioning** flow
+- **Subscription-based** access control
 
-**Resultado**: Cada oficina opera em um ambiente completamente isolado, garantindo segurança e conformidade com LGPD/GDPR.
+**Result**: Each shop operates in a completely isolated environment, ensuring security and compliance with GDPR/LGPD.
 
 ---
 
-## 💾 Banco de Dados
+## 💾 Database
 
-O sistema utiliza **PostgreSQL** como banco de dados primário:
+The system uses **PostgreSQL** as the primary database:
 
-- Migrations versionadas
-- Estratégia de persistência tenant-aware
-- Scripts de inicialização para ambientes reproduzíveis
-- Administração via pgAdmin
+- Versioned migrations
+- Tenant-aware persistence strategy
+- Initialization scripts for reproducible environments
+- Administration via pgAdmin
 
 ```bash
 db/
-├── init.sql      # Inicialização
-└── schema.sql    # Schema principal
+├── init.sql      # Initialization
+└── schema.sql    # Main schema
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### Pré-requisitos
+### Prerequisites
 
 - Docker 24.0+
 - Docker Compose 2.20+
 - Git
 
-### Instalação
+### Installation
 
 ```bash
-# 1. Clone o repositório
+# 1. Clone the repository
 git clone https://github.com/your-username/autoflow-pro.git
 cd autoflow-pro
 
-# 2. Configure as variáveis de ambiente
+# 2. Configure environment variables
 cp .env.example .env
-# Edite o arquivo .env com suas configurações
+# Edit the .env file with your settings
 
-# 3. Inicie os containers
+# 3. Start the containers
 docker compose up --build -d
 ```
 
-### Acessos
+### Access
 
-| Serviço | URL | Descrição |
-|---------|-----|-----------|
-| **Frontend** | http://localhost:3000 | Interface web |
-| **Node API** | http://localhost:3001 | API principal |
+| Service | URL | Description |
+|---------|-----|-------------|
+| **Frontend** | http://localhost:3000 | Web interface |
+| **Node API** | http://localhost:3001 | Main API |
 | **Django API** | http://localhost:8000 | Control Plane API |
-| **pgAdmin** | http://localhost:5050 | Admin do banco |
+| **pgAdmin** | http://localhost:5050 | Database admin |
 
-### Credenciais pgAdmin
+### pgAdmin Credentials
 
 ```
 Email: admin@autoflowpro.com
-Senha: (definida no .env)
+Password: (defined in .env)
 ```
 
 ---
 
-## 📝 Variáveis de Ambiente
+## 📝 Environment Variables
 
 ```env
 # Database
 POSTGRES_DB=autoflow_db
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=sua_senha_segura
+POSTGRES_PASSWORD=your_secure_password
 POSTGRES_PORT=5433
 
 # Backend Node.js
 NODE_API_PORT=3001
-DATABASE_URL=postgresql://postgres:senha@db:5432/autoflow_db
-JWT_SECRET=seu_jwt_secret_minimo_32_chars
+DATABASE_URL=postgresql://postgres:password@db:5432/autoflow_db
+JWT_SECRET=your_jwt_secret_minimum_32_chars
 
 # Backend Django
-DJANGO_SECRET_KEY=sua_django_secret_key
+DJANGO_SECRET_KEY=your_django_secret_key
 DJANGO_DEBUG=True
 DJANGO_ALLOWED_HOSTS=*
 
@@ -260,23 +260,23 @@ NEXT_PUBLIC_APP_NAME=AutoFlow Pro
 
 ---
 
-## 📚 Documentação
+## 📚 Documentation
 
-A documentação completa está disponível no diretório `/docs`:
+Complete documentation is available in the `/docs` directory:
 
-- ✅ Estudo de Viabilidade
-- ✅ Levantamento de Requisitos
-- ✅ Casos de Uso
+- ✅ Feasibility Study
+- ✅ Requirements Gathering
+- ✅ Use Cases
 - ✅ User Stories
 - ✅ Product Backlog
-- ✅ Setup Scrum
-- ✅ Modelagem de Banco de Dados
-- ✅ Matriz de Rastreabilidade
+- ✅ Scrum Setup
+- ✅ Database Modeling
+- ✅ Traceability Matrix
 - ✅ Business Model Canvas
 
 ---
 
-## 🧪 Testes
+## 🧪 Testing
 
 ```bash
 # Backend tests
@@ -290,21 +290,21 @@ npm test
 
 ---
 
-## 🤝 Contribuição
+## 🤝 Contributing
 
-Este é um projeto privado para uso interno e acadêmico.
-
----
-
-## 📄 Licença
-
-**Projeto Privado** - Uso interno e acadêmico apenas.
+This is a private project for internal and academic use.
 
 ---
 
-## 👨‍💻 Autor
+## 📄 License
 
-Desenvolvido como projeto de engenharia de software com fundamentação sólida em:
+**Private Project** - Internal and academic use only.
+
+---
+
+## 👨‍💻 Author
+
+Developed as a software engineering project with solid foundations in:
 
 - Requirements Engineering
 - Agile Methodologies (Scrum)
@@ -315,7 +315,7 @@ Desenvolvido como projeto de engenharia de software com fundamentação sólida 
 ---
 
 <p align="center">
-  <strong>AutoFlow Pro</strong> - Transformando a gestão de oficinas mecânicas
+  <strong>AutoFlow Pro</strong> - Transforming auto shop management
   <br />
-  <sub>© 2024 Todos os direitos reservados</sub>
+  <sub>© 2024 All rights reserved</sub>
 </p>

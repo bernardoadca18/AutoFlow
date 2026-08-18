@@ -1,305 +1,321 @@
 <p align="center">
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/License-Private-red" alt="License">
+  <img src="https://img.shields.io/badge/Next.js-16-black" alt="Next.js">
+  <img src="https://img.shields.io/badge/Django-5.2-green" alt="Django">
+</p>
+
+<p align="center">
   🇧🇷 Português | 🇺🇸 <a href="./README.md">English</a>
 </p>
 
-# AutoFlow Pro
+<h1 align="center">
+  <img src="https://img.shields.io/badge/AutoFlow%20Pro-SaaS%20Platform-blue?style=for-the-badge&logo=car&logoColor=white" alt="AutoFlow Pro">
+</h1>
 
-## Visão Geral
+<p align="center">
+  <strong>Plataforma SaaS Multi-Tenant Profissional para Gestão de Oficinas Mecânicas</strong>
+</p>
 
-O **AutoFlow Pro** é uma plataforma SaaS B2B multi-tenant desenvolvida para modernizar e otimizar a gestão de oficinas mecânicas e centros automotivos.
-
-Construído desde sua base com forte foco em escalabilidade, segurança, isolamento entre clientes (tenants) e eficiência operacional, o sistema centraliza o fluxo principal do negócio — desde o cadastro de clientes e veículos até a gestão de Ordens de Serviço (OS), controle de assinaturas e provisionamento administrativo.
-
-A plataforma segue uma arquitetura híbrida e conteinerizada que separa claramente as responsabilidades entre a experiência do frontend e as regras de negócio do backend, garantindo manutenção facilitada, reprodutibilidade e deploy pronto para produção.
-
-O AutoFlow Pro também foi desenvolvido com uma sólida base de engenharia de software, combinando engenharia tradicional de requisitos com execução ágil orientada por Scrum.
-
----
-
-## Funcionalidades Principais
-
-* **Arquitetura SaaS Multi-Tenant**
-
-  * Isolamento de tenants via roteamento por subdomínio
-  * Separação lógica de dados entre oficinas
-  * Fundação segura e escalável para SaaS
-
-* **Gestão de Oficinas**
-
-  * Cadastro e gerenciamento de clientes
-  * Cadastro e rastreamento de veículos
-  * Gestão completa do ciclo de Ordens de Serviço (OS)
-
-* **Control Plane**
-
-  * Administração centralizada de assinantes
-  * Gestão de planos e assinaturas
-  * Provisionamento de novos tenants e ambientes
-
-* **Autenticação e Acesso**
-
-  * Fluxos seguros de login
-  * Estrutura de acesso administrativo
-  * Proteção de fluxos operacionais
-
-* **Produtividade Operacional**
-
-  * Interface rápida e responsiva para mecânicos e gestores
-  * Navegação orientada ao negócio
-  * Módulos críticos organizados por domínio
-
-* **Infrastructure as Code**
-
-  * Ambiente totalmente conteinerizado com Docker
-  * Reprodutibilidade entre desenvolvimento e produção
-  * Builds determinísticos e estratégia resiliente de deploy
+<p align="center">
+  Sistema completo para modernização e otimização de gestão de oficinas automotivas,
+  <br />
+  com foco em escalabilidade, segurança e eficiência operacional.
+</p>
 
 ---
 
-## Stack Tecnológica
+## 📋 Visão Geral
 
-## Backend
+**AutoFlow Pro** é uma plataforma B2B multi-tenant SaaS projetada para transformar a gestão de oficinas mecânicas e centros automotivos. Com uma arquitetura moderna e escalável, o sistema oferece:
 
-* **Linguagem:** Python
-* **Framework:** Django
-* **Camada de API:** Django REST Framework
-* **Arquitetura:** SaaS Multi-Tenant
-* **Banco de Dados:** PostgreSQL
-* **Provisionamento:** Arquitetura de Control Plane
-
-### Módulos Backend
-
-* `tenants/`
-* `accounts/`
-* `control_plane/`
+- ✅ **Isolamento total de dados** entre tenants
+- ✅ **Interface responsiva** e intuitiva
+- ✅ **API RESTful** documentada
+- ✅ **Arquitetura preparada para produção**
+- ✅ **Infraestrutura como código**
 
 ---
 
-## Frontend
+## 🚀 Funcionalidades Principais
 
-* **Framework:** Next.js 16
-* **Arquitetura:** App Router
-* **Linguagem:** TypeScript
-* **Biblioteca UI:** React
-* **Estilização:** Tailwind CSS
+### Arquitetura SaaS Multi-Tenant
+- Isolamento de tenants via roteamento por subdomínio
+- Separação lógica de dados entre oficinas
+- Provisionamento automatizado de novos tenants
+- Controle de assinaturas e planos
 
-### Principais Fluxos
+### Gestão de Oficina
+- Cadastro e gerenciamento de clientes
+- Registro e rastreamento de veículos
+- Ciclo de vida completo de Ordens de Serviço (OS)
+- Dashboard com métricas em tempo real
 
-* `/app/os` → Ordens de Serviço
-* `/app/clients` → Gestão de Clientes
-* `/app/login` → Autenticação
-* `/app/components` → Componentes compartilhados
+### Control Plane
+- Administração centralizada de assinantes
+- Gestão de planos e cobranças
+- Provisionamento de novos ambientes
+- Monitoramento de tenants
 
-### Componentes UI Reutilizáveis
+### Autenticação & Segurança
+- Fluxos de login seguros
+- Estrutura de acesso administrativo
+- Workflows operacionais protegidos
+- Autenticação JWT
 
-O projeto possui uma biblioteca completa de componentes UI:
-
-* **Button** - Botões com variantes (primary, secondary, success, danger, warning, ghost)
-* **Input** - Campos de entrada com validação e estados de erro
-* **Card** - Cards com diferentes estilos e bordas
-* **Modal** - Modais responsivos com fechar por ESC
-* **Table** - Tabelas com paginação e estados de loading
-* **Badge** - Badges coloridos para status
-* **Toast** - Sistema de notificações com contexto
-* **Loading** - Componentes de loading animados
-
-### Hooks Customizados
-
-O projeto implementa hooks customizados para gerenciamento de estado:
-
-* **useAuth** - Gerenciamento de autenticação e sessão
-* **useClients** - CRUD de clientes
-* **useServiceOrders** - Gestão de ordens de serviço
+### Produtividade Operacional
+- Interface rápida e responsiva
+- Navegação focada no negócio
+- Busca e filtros avançados
+- Notificações em tempo real
 
 ---
 
-## Infraestrutura
+## 🛠️ Stack Tecnológica
 
-* **Conteinerização:** Docker
-* **Orquestração:** Docker Compose
-* **Administração de Banco:** pgAdmin
-* **Padronização de Ambiente:** Dockerfiles dedicados para frontend e backend
+### Backend
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| **Python** | 3.11+ | Linguagem principal |
+| **Django** | 5.2 | Framework web |
+| **Django REST Framework** | 3.14 | API RESTful |
+| **PostgreSQL** | 16 | Banco de dados relacional |
+| **Prisma** | 5.22 | ORM para API Node.js |
+
+#### Módulos Backend
+```
+backend/
+├── system/           # Django Control Plane
+│   ├── tenants/      # Gestão de tenants
+│   ├── accounts/     # Autenticação e usuários
+│   └── control_plane/ # Configurações centrais
+└── app/              # API Node.js Principal
+    └── src/
+        ├── server.js
+        └── prisma/
+```
+
+### Frontend
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| **Next.js** | 16.0 | Framework React |
+| **React** | 19.2 | Biblioteca UI |
+| **TypeScript** | 5.x | Tipagem estática |
+| **Tailwind CSS** | 4.x | Framework CSS |
+| **Lucide React** | 0.555 | Ícones SVG |
+
+#### Estrutura Frontend
+```
+frontend/
+├── app/
+│   ├── os/           # Ordens de Serviço
+│   ├── clients/      # Gestão de Clientes
+│   ├── login/        # Autenticação
+│   ├── components/   # Componentes reutilizáveis
+│   │   ├── ui/       # Design System
+│   │   └── Sidebar.tsx
+│   └── src/
+│       ├── services/ # API clients
+│       └── types/    # Tipos TypeScript
+└── package.json
+```
+
+### Infraestrutura
+
+| Serviço | Tecnologia |
+|---------|------------|
+| **Conteinerização** | Docker |
+| **Orquestração** | Docker Compose |
+| **Administração de Banco** | pgAdmin 4 |
+| **Reverse Proxy** | Nginx (produção) |
 
 ---
 
-## Arquitetura
+## 🏗️ Arquitetura
 
-```text
-AutoFlow Pro
-│
-├── frontend/
-│   ├── app/
-│   │   ├── clients/          # Gestão de Clientes
-│   │   ├── login/            # Autenticação
-│   │   ├── os/               # Ordens de Serviço
-│   │   ├── components/       # Componentes Compartilhados
-│   │   │   └── ui/           # Componentes UI Reutilizáveis
-│   │   └── src/
-│   │       ├── services/     # Serviços de API
-│   │       ├── hooks/        # Hooks Customizados
-│   │       └── types/        # Definições TypeScript
-│   │
-│   └── Dockerfile
-│
-├── backend/
-│   ├── system/
-│   │   ├── tenants/          # Lógica Multi-Tenant
-│   │   ├── accounts/         # Gestão de Contas
-│   │   └── control_plane/    # Provisionamento
-│   │
-│   └── Dockerfile
-│
-├── db/
-│   ├── init.sql
-│   └── schema.sql
-│
-├── docs/
-│   ├── Engenharia de Requisitos
-│   ├── Casos de Uso
-│   ├── User Stories
-│   ├── Product Backlog
-│   ├── Scrum Setup
-│   └── Canvas de Modelo de Negócio
-│
-└── docker-compose.yaml
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        AutoFlow Pro                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ┌──────────────┐        ┌──────────────────────────────┐  │
+│  │   Frontend    │◄──────►│     Backend APIs             │  │
+│  │   Next.js     │        │                              │  │
+│  │   Port: 3000  │        │  ┌──────────┐ ┌───────────┐ │  │
+│  └──────────────┘        │  │ Node.js  │ │  Django   │ │  │
+│                          │  │ API      │ │  Control  │ │  │
+│                          │  │ Port     │ │  Plane    │ │  │
+│                          │  │ 3001     │ │  Port 8000│ │  │
+│                          │  └──────────┘ └───────────┘ │  │
+│                          └──────────┬───────────────────┘  │
+│                                     │                        │
+│                          ┌──────────▼───────────┐           │
+│                          │   PostgreSQL         │           │
+│                          │   Database           │           │
+│                          │   Port: 5433         │           │
+│                          └──────────────────────┘           │
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Arquitetura Multi-Tenant
+## 🔐 Arquitetura Multi-Tenant
 
-Um dos aspectos mais críticos do AutoFlow Pro é sua estratégia de isolamento entre tenants.
+O AutoFlow Pro implementa uma estratégia robusta de isolamento de tenants:
 
-Cada oficina opera como um tenant isolado utilizando:
+- **Roteamento por subdomínio** para identificação de tenants
+- **Separação lógica** de dados entre oficinas
+- **Flow de provisionamento** dedicado
+- **Controle de acesso** baseado em assinatura
 
-* Roteamento por subdomínio
-* Separação lógica de tenants
-* Fluxo dedicado de provisionamento
-* Controle de acesso baseado em assinatura
-
-Isso garante que a Oficina A jamais tenha acesso aos dados operacionais da Oficina B — um requisito crítico para conformidade, segurança e confiança em aplicações SaaS.
-
-Essa arquitetura permite escalabilidade horizontal segura, mantendo administração centralizada através do Control Plane.
+**Resultado**: Cada oficina opera em um ambiente completamente isolado, garantindo segurança e conformidade com LGPD/GDPR.
 
 ---
 
-## Gestão de Banco de Dados
+## 💾 Banco de Dados
 
-O AutoFlow Pro utiliza **PostgreSQL** como banco de dados relacional principal.
+O sistema utiliza **PostgreSQL** como banco de dados primário:
 
-Recursos incluem:
-
-* Migrações versionadas de esquema
-* Persistência preparada para multi-tenant
-* Scripts de inicialização para ambientes reproduzíveis
-* Inspeção administrativa via pgAdmin
-
-A configuração é suportada por:
-
-```text
-db/init.sql
-db/schema.sql
-```
-
----
-
-## Setup
-
-## 1. Clonar o repositório
+- Migrações versionadas
+- Estratégia de persistência tenant-aware
+- Scripts de inicialização para ambientes reproduzíveis
+- Administração via pgAdmin
 
 ```bash
+db/
+├── init.sql      # Inicialização
+└── schema.sql    # Schema principal
+```
+
+---
+
+## 🚀 Quick Start
+
+### Pré-requisitos
+
+- Docker 24.0+
+- Docker Compose 2.20+
+- Git
+
+### Instalação
+
+```bash
+# 1. Clone o repositório
 git clone https://github.com/seu-usuario/autoflow-pro.git
 cd autoflow-pro
+
+# 2. Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env com suas configurações
+
+# 3. Inicie os containers
+docker compose up --build -d
+```
+
+### Acessos
+
+| Serviço | URL | Descrição |
+|---------|-----|-----------|
+| **Frontend** | http://localhost:3000 | Interface web |
+| **Node API** | http://localhost:3001 | API principal |
+| **Django API** | http://localhost:8000 | Control Plane API |
+| **pgAdmin** | http://localhost:5050 | Admin do banco |
+
+### Credenciais pgAdmin
+
+```
+Email: admin@autoflowpro.com
+Senha: (definida no .env)
 ```
 
 ---
 
-## 2. Subir os containers
+## 📝 Variáveis de Ambiente
+
+```env
+# Database
+POSTGRES_DB=autoflow_db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=sua_senha_segura
+POSTGRES_PORT=5433
+
+# Backend Node.js
+NODE_API_PORT=3001
+DATABASE_URL=postgresql://postgres:senha@db:5432/autoflow_db
+JWT_SECRET=seu_jwt_secret_minimo_32_chars
+
+# Backend Django
+DJANGO_SECRET_KEY=sua_django_secret_key
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=*
+
+# Frontend
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_APP_NAME=AutoFlow Pro
+```
+
+---
+
+## 📚 Documentação
+
+A documentação completa está disponível no diretório `/docs`:
+
+- ✅ Estudo de Viabilidade
+- ✅ Levantamento de Requisitos
+- ✅ Casos de Uso
+- ✅ User Stories
+- ✅ Product Backlog
+- ✅ Setup Scrum
+- ✅ Modelagem de Banco de Dados
+- ✅ Matriz de Rastreabilidade
+- ✅ Business Model Canvas
+
+---
+
+## 🧪 Testes
 
 ```bash
-docker compose up --build
-```
+# Backend tests
+cd backend/system
+python manage.py test
 
-Esse comando provisiona:
-
-* Banco PostgreSQL
-* pgAdmin
-* API Django
-* Aplicação frontend Next.js
-
-Todos os serviços são executados em uma rede bridge isolada do Docker.
-
----
-
-## 3. Acessar a aplicação
-
-Frontend:
-
-```text
-http://localhost:3000
-```
-
-Backend API:
-
-```text
-http://localhost:8000
-```
-
-pgAdmin:
-
-```text
-http://localhost:5050
+# Frontend tests
+cd frontend
+npm test
 ```
 
 ---
 
-## Processo de Desenvolvimento
+## 🤝 Contribuição
 
-O AutoFlow Pro não foi desenvolvido apenas como um produto de software, mas também como um projeto completo de engenharia de software.
-
-O ciclo de desenvolvimento inclui:
-
-### Engenharia de Requisitos
-
-* Estudo de Viabilidade
-* Documentação Funcional
-* Modelagem de Casos de Uso
-* Matriz de Rastreabilidade de Requisitos
-* Modelagem de Banco de Dados
-* Canvas de Modelo de Negócio
-
-### Gestão Ágil
-
-* Adoção do framework Scrum
-* Mapeamento de User Stories
-* Definição do Product Backlog inicial
-* Priorização técnica orientada por valor de negócio
-
-Isso garantiu alinhamento entre decisões técnicas e entrega de valor real ao negócio.
+Este é um projeto privado para uso interno e acadêmico.
 
 ---
 
-## Documentação
+## 📄 Licença
 
-O diretório `/docs` inclui:
-
-* Estudo de Viabilidade
-* Levantamento de Requisitos
-* Casos de Uso
-* User Stories
-* Product Backlog
-* Scrum Setup
-* Documentação de Arquitetura
-* Modelagem de Banco
-* Matriz de Rastreabilidade
-* Canvas de Modelo de Negócio
-
-Isso fornece rastreabilidade completa desde a concepção de negócio até a implementação técnica.
+**Projeto Privado** - Uso interno e acadêmico apenas.
 
 ---
 
-## Licença
+## 👨‍💻 Autor
 
-Projeto privado.
+Desenvolvido como projeto de engenharia de software com fundamentação sólida em:
 
-Uso interno e acadêmico.
+- Requirements Engineering
+- Agile Methodologies (Scrum)
+- Clean Architecture
+- DevOps Best Practices
+- Multi-Tenant SaaS Patterns
+
+---
+
+<p align="center">
+  <strong>AutoFlow Pro</strong> - Transformando a gestão de oficinas mecânicas
+  <br />
+  <sub>© 2024 Todos os direitos reservados</sub>
+</p>
