@@ -2,17 +2,17 @@
   🇧🇷 Português | 🇺🇸 <a href="./README.md">English</a>
 </p>
 
-# ControlCar
+# AutoFlow Pro
 
 ## Visão Geral
 
-O **ControlCar** é uma plataforma SaaS B2B multi-tenant desenvolvida para modernizar e otimizar a gestão de oficinas mecânicas e centros automotivos.
+O **AutoFlow Pro** é uma plataforma SaaS B2B multi-tenant desenvolvida para modernizar e otimizar a gestão de oficinas mecânicas e centros automotivos.
 
 Construído desde sua base com forte foco em escalabilidade, segurança, isolamento entre clientes (tenants) e eficiência operacional, o sistema centraliza o fluxo principal do negócio — desde o cadastro de clientes e veículos até a gestão de Ordens de Serviço (OS), controle de assinaturas e provisionamento administrativo.
 
 A plataforma segue uma arquitetura híbrida e conteinerizada que separa claramente as responsabilidades entre a experiência do frontend e as regras de negócio do backend, garantindo manutenção facilitada, reprodutibilidade e deploy pronto para produção.
 
-O ControlCar também foi desenvolvido com uma sólida base de engenharia de software, combinando engenharia tradicional de requisitos com execução ágil orientada por Scrum.
+O AutoFlow Pro também foi desenvolvido com uma sólida base de engenharia de software, combinando engenharia tradicional de requisitos com execução ágil orientada por Scrum.
 
 ---
 
@@ -77,7 +77,7 @@ O ControlCar também foi desenvolvido com uma sólida base de engenharia de soft
 
 ## Frontend
 
-* **Framework:** Next.js 15
+* **Framework:** Next.js 16
 * **Arquitetura:** App Router
 * **Linguagem:** TypeScript
 * **Biblioteca UI:** React
@@ -89,6 +89,27 @@ O ControlCar também foi desenvolvido com uma sólida base de engenharia de soft
 * `/app/clients` → Gestão de Clientes
 * `/app/login` → Autenticação
 * `/app/components` → Componentes compartilhados
+
+### Componentes UI Reutilizáveis
+
+O projeto possui uma biblioteca completa de componentes UI:
+
+* **Button** - Botões com variantes (primary, secondary, success, danger, warning, ghost)
+* **Input** - Campos de entrada com validação e estados de erro
+* **Card** - Cards com diferentes estilos e bordas
+* **Modal** - Modais responsivos com fechar por ESC
+* **Table** - Tabelas com paginação e estados de loading
+* **Badge** - Badges coloridos para status
+* **Toast** - Sistema de notificações com contexto
+* **Loading** - Componentes de loading animados
+
+### Hooks Customizados
+
+O projeto implementa hooks customizados para gerenciamento de estado:
+
+* **useAuth** - Gerenciamento de autenticação e sessão
+* **useClients** - CRUD de clientes
+* **useServiceOrders** - Gestão de ordens de serviço
 
 ---
 
@@ -104,25 +125,27 @@ O ControlCar também foi desenvolvido com uma sólida base de engenharia de soft
 ## Arquitetura
 
 ```text
-ControlCar
+AutoFlow Pro
 │
 ├── frontend/
 │   ├── app/
-│   │   ├── clients/
-│   │   ├── login/
-│   │   ├── os/
-│   │   ├── components/
+│   │   ├── clients/          # Gestão de Clientes
+│   │   ├── login/            # Autenticação
+│   │   ├── os/               # Ordens de Serviço
+│   │   ├── components/       # Componentes Compartilhados
+│   │   │   └── ui/           # Componentes UI Reutilizáveis
 │   │   └── src/
-│   │       ├── services/
-│   │       └── types/
+│   │       ├── services/     # Serviços de API
+│   │       ├── hooks/        # Hooks Customizados
+│   │       └── types/        # Definições TypeScript
 │   │
 │   └── Dockerfile
 │
 ├── backend/
 │   ├── system/
-│   │   ├── tenants/
-│   │   ├── accounts/
-│   │   └── control_plane/
+│   │   ├── tenants/          # Lógica Multi-Tenant
+│   │   ├── accounts/         # Gestão de Contas
+│   │   └── control_plane/    # Provisionamento
 │   │
 │   └── Dockerfile
 │
@@ -145,7 +168,7 @@ ControlCar
 
 ## Arquitetura Multi-Tenant
 
-Um dos aspectos mais críticos do ControlCar é sua estratégia de isolamento entre tenants.
+Um dos aspectos mais críticos do AutoFlow Pro é sua estratégia de isolamento entre tenants.
 
 Cada oficina opera como um tenant isolado utilizando:
 
@@ -162,7 +185,7 @@ Essa arquitetura permite escalabilidade horizontal segura, mantendo administraç
 
 ## Gestão de Banco de Dados
 
-O ControlCar utiliza **PostgreSQL** como banco de dados relacional principal.
+O AutoFlow Pro utiliza **PostgreSQL** como banco de dados relacional principal.
 
 Recursos incluem:
 
@@ -185,8 +208,8 @@ db/schema.sql
 ## 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/controlcar.git
-cd controlcar
+git clone https://github.com/seu-usuario/autoflow-pro.git
+cd autoflow-pro
 ```
 
 ---
@@ -232,7 +255,7 @@ http://localhost:5050
 
 ## Processo de Desenvolvimento
 
-O ControlCar não foi desenvolvido apenas como um produto de software, mas também como um projeto completo de engenharia de software.
+O AutoFlow Pro não foi desenvolvido apenas como um produto de software, mas também como um projeto completo de engenharia de software.
 
 O ciclo de desenvolvimento inclui:
 

@@ -6,8 +6,8 @@ import Sidebar from "./components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WorkshopHub",
-  description: "Sistema de Gestão de Oficinas",
+  title: "AutoFlow Pro",
+  description: "Sistema Profissional de Gestão para Oficinas Mecânicas",
 };
 
 export default function RootLayout({

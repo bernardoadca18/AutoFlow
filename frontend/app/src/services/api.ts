@@ -1,11 +1,13 @@
 import axios from 'axios';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
 export const api = axios.create({
-  baseURL: 'http://18.118.187.20:3001',
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
-    // 'x-tenant-id': 'uuid-do-tenant ' 
-  }
+  },
+  timeout: 30000, // 30 seconds timeout
 });
 
 api.interceptors.request.use((config) => {

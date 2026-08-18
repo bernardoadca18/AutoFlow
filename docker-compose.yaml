@@ -3,7 +3,7 @@ services:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-workshophub_db}
+      POSTGRES_DB: ${POSTGRES_DB:-autoflow_db}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Database password required}
     ports:
@@ -12,7 +12,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./db:/docker-entrypoint-initdb.d
     networks:
-      - workshophub_network
+      - autoflow_network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
@@ -26,7 +26,7 @@ services:
     ports:
       - "${NODE_API_PORT:-3001}:3001"
     environment:
-      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:postgres@db:5432/workshophub_db?schema=public}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:postgres@db:5432/autoflow_db?schema=public}
       PORT: 3001
       JWT_SECRET: ${JWT_SECRET:?JWT secret required}
       JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
@@ -34,7 +34,7 @@ services:
       db:
         condition: service_healthy
     networks:
-      - workshophub_network
+      - autoflow_network
 
   backend-django:
     build:
@@ -43,7 +43,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DB_NAME: ${POSTGRES_DB:-workshophub_db}
+      DB_NAME: ${POSTGRES_DB:-autoflow_db}
       DB_USER: ${POSTGRES_USER:-postgres}
       DB_PASSWORD: ${POSTGRES_PASSWORD:?Database password required}
       DB_HOST: db
@@ -56,7 +56,7 @@ services:
       db:
         condition: service_healthy
     networks:
-      - workshophub_network
+      - autoflow_network
 
   frontend:
     build:
@@ -66,14 +66,14 @@ services:
       - "3000:3000"
     environment:
       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:3001}
-      NEXT_PUBLIC_APP_NAME: ${NEXT_PUBLIC_APP_NAME:-WorkshopHub}
+      NEXT_PUBLIC_APP_NAME: ${NEXT_PUBLIC_APP_NAME:-AutoFlow Pro}
     networks:
-      - workshophub_network
+      - autoflow_network
 
 volumes:
   postgres_data:
     driver: local
 
 networks:
-  workshophub_network:
+  autoflow_network:
     driver: bridge

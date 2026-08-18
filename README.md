@@ -1,282 +1,321 @@
 <p align="center">
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/License-Private-red" alt="License">
+  <img src="https://img.shields.io/badge/Next.js-16-black" alt="Next.js">
+  <img src="https://img.shields.io/badge/Django-5.2-green" alt="Django">
+</p>
+
+<p align="center">
   🇺🇸 English | 🇧🇷 <a href="./README.pt-BR.md">Português</a>
 </p>
 
-# WorkshopHub
+<h1 align="center">
+  <img src="https://img.shields.io/badge/AutoFlow%20Pro-SaaS%20Platform-blue?style=for-the-badge&logo=car&logoColor=white" alt="AutoFlow Pro">
+</h1>
 
-## Overview
+<p align="center">
+  <strong>Plataforma SaaS Multi-Tenant Profissional para Gestão de Oficinas Mecânicas</strong>
+</p>
 
-**WorkshopHub** is a B2B multi-tenant SaaS platform designed to modernize and optimize the management of automotive repair shops and mechanical workshops.
-
-Built from the ground up with a strong focus on scalability, security, tenant isolation, and operational efficiency, the platform centralizes the core business workflow — from customer and vehicle registration to service order (Work Order) management, subscription control, and administrative provisioning.
-
-The system follows a hybrid and containerized architecture that clearly separates responsibilities between the frontend experience and backend business logic, ensuring maintainability, reproducibility, and production-ready deployment.
-
-WorkshopHub was also developed with a strong software engineering foundation, combining traditional requirements engineering with agile product execution using Scrum.
-
----
-
-## Core Features
-
-* **Multi-Tenant SaaS Architecture**
-
-  * Tenant isolation using subdomain-based routing
-  * Logical data separation between workshops
-  * Secure and scalable SaaS foundation
-
-* **Workshop Management**
-
-  * Customer registration and management
-  * Vehicle registration and tracking
-  * Service Order (OS / Work Orders) lifecycle management
-
-* **Control Plane**
-
-  * Centralized subscriber administration
-  * Subscription and plan management
-  * New tenant provisioning and environment control
-
-* **Authentication & Access**
-
-  * Secure login flows
-  * Administrative access structure
-  * Protected operational workflows
-
-* **Operational Productivity**
-
-  * Fast and responsive interface for mechanics and managers
-  * Business-focused navigation and workflows
-  * High-priority modules isolated by domain
-
-* **Infrastructure as Code**
-
-  * Fully containerized environment with Docker
-  * Reproducible local and production environments
-  * Deterministic builds and resilient deployment strategy
+<p align="center">
+  Sistema completo para modernização e otimização de gestão de oficinas automotivas,
+  <br />
+  com foco em escalabilidade, segurança e eficiência operacional.
+</p>
 
 ---
 
-## Tech Stack
+## 📋 Visão Geral
 
-## Backend
+**AutoFlow Pro** é uma plataforma B2B multi-tenant SaaS projetada para transformar a gestão de oficinas mecânicas e centros automotivos. Com uma arquitetura moderna e escalável, o sistema oferece:
 
-* **Language:** Python
-* **Framework:** Django
-* **API Layer:** Django REST Framework
-* **Architecture:** Multi-Tenant SaaS
-* **Database:** PostgreSQL
-* **Provisioning:** Control Plane architecture
-
-### Backend Modules
-
-* `tenants/`
-* `accounts/`
-* `control_plane/`
+- ✅ **Isolamento total de dados** entre tenants
+- ✅ **Interface responsiva** e intuitiva
+- ✅ **API RESTful** documentada
+- ✅ **Arquitetura preparada para produção**
+- ✅ **Infraestrutura como código**
 
 ---
 
-## Frontend
+## 🚀 Funcionalidades Principais
 
-* **Framework:** Next.js 15
-* **Architecture:** App Router
-* **Language:** TypeScript
-* **UI Library:** React
-* **Styling:** Tailwind CSS
+### Multi-Tenant SaaS Architecture
+- Isolamento de tenants via subdomain-based routing
+- Separação lógica de dados entre oficinas
+- Provisionamento automatizado de novos tenants
+- Controle de assinaturas e planos
 
-### Main Frontend Flows
+### Gestão de Oficina
+- Cadastro e gerenciamento de clientes
+- Registro e rastreamento de veículos
+- Ciclo de vida completo de Ordens de Serviço (OS)
+- Dashboard com métricas em tempo real
 
-* `/app/os` → Service Orders
-* `/app/clients` → Client Management
-* `/app/login` → Authentication
-* `/app/components` → Shared UI components
+### Control Plane
+- Administração centralizada de assinantes
+- Gestão de planos e cobranças
+- Provisionamento de novos ambientes
+- Monitoramento de tenants
+
+### Autenticação & Segurança
+- Fluxos de login seguros
+- Estrutura de acesso administrativo
+- Workflows operacionais protegidos
+- JWT Authentication
+
+### Produtividade Operacional
+- Interface rápida e responsiva
+- Navegação focada no negócio
+- Busca e filtros avançados
+- Notificações em tempo real
 
 ---
 
-## Infrastructure
+## 🛠️ Stack Tecnológica
 
-* **Containerization:** Docker
-* **Orchestration:** Docker Compose
-* **Database Admin:** pgAdmin
-* **Environment Standardization:** Dockerfiles for both frontend and backend
+### Backend
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| **Python** | 3.11+ | Linguagem principal |
+| **Django** | 5.2 | Framework web |
+| **Django REST Framework** | 3.14 | API RESTful |
+| **PostgreSQL** | 16 | Banco de dados relacional |
+| **Prisma** | 5.22 | ORM para Node.js API |
+
+#### Módulos Backend
+```
+backend/
+├── system/           # Django Control Plane
+│   ├── tenants/      # Gestão de tenants
+│   ├── accounts/     # Autenticação e usuários
+│   └── control_plane/ # Configurações centrais
+└── app/              # Node.js API Principal
+    └── src/
+        ├── server.js
+        └── prisma/
+```
+
+### Frontend
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| **Next.js** | 16.0 | Framework React |
+| **React** | 19.2 | Biblioteca UI |
+| **TypeScript** | 5.x | Tipagem estática |
+| **Tailwind CSS** | 4.x | Framework CSS |
+| **Lucide React** | 0.555 | Ícones SVG |
+
+#### Estrutura Frontend
+```
+frontend/
+├── app/
+│   ├── os/           # Ordens de Serviço
+│   ├── clients/      # Gestão de Clientes
+│   ├── login/        # Autenticação
+│   ├── components/   # Componentes reutilizáveis
+│   │   ├── ui/       # Design System
+│   │   └── Sidebar.tsx
+│   └── src/
+│       ├── services/ # API clients
+│       └── types/    # TypeScript types
+└── package.json
+```
+
+### Infraestrutura
+
+| Serviço | Tecnologia |
+|---------|------------|
+| **Containerização** | Docker |
+| **Orquestração** | Docker Compose |
+| **Database Admin** | pgAdmin 4 |
+| **Reverse Proxy** | Nginx (produção) |
 
 ---
 
-## Architecture
+## 🏗️ Arquitetura
 
-```text
-WorkshopHub
-│
-├── frontend/
-│   ├── app/
-│   │   ├── clients/
-│   │   ├── login/
-│   │   ├── os/
-│   │   ├── components/
-│   │   └── src/
-│   │       ├── services/
-│   │       └── types/
-│   │
-│   └── Dockerfile
-│
-├── backend/
-│   ├── system/
-│   │   ├── tenants/
-│   │   ├── accounts/
-│   │   └── control_plane/
-│   │
-│   └── Dockerfile
-│
-├── db/
-│   ├── init.sql
-│   └── schema.sql
-│
-├── docs/
-│   ├── Requirements Engineering
-│   ├── Use Cases
-│   ├── User Stories
-│   ├── Product Backlog
-│   ├── Scrum Setup
-│   └── Business Model Canvas
-│
-└── docker-compose.yaml
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        AutoFlow Pro                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ┌──────────────┐        ┌──────────────────────────────┐  │
+│  │   Frontend    │◄──────►│     Backend APIs             │  │
+│  │   Next.js     │        │                              │  │
+│  │   Port: 3000  │        │  ┌──────────┐ ┌───────────┐ │  │
+│  └──────────────┘        │  │ Node.js  │ │  Django   │ │  │
+│                          │  │ API      │ │  Control  │ │  │
+│                          │  │ Port     │ │  Plane    │ │  │
+│                          │  │ 3001     │ │  Port 8000│ │  │
+│                          │  └──────────┘ └───────────┘ │  │
+│                          └──────────┬───────────────────┘  │
+│                                     │                        │
+│                          ┌──────────▼───────────┐           │
+│                          │   PostgreSQL         │           │
+│                          │   Database           │           │
+│                          │   Port: 5433         │           │
+│                          └──────────────────────┘           │
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Multi-Tenant Architecture
+## 🔐 Multi-Tenant Architecture
 
-One of the most critical aspects of WorkshopHub is its **tenant isolation strategy**.
+O AutoFlow Pro implementa uma estratégia robusta de isolamento de tenants:
 
-Each workshop operates as an isolated tenant using:
+- **Subdomain-based routing** para identificação de tenants
+- **Separação lógica** de dados entre oficinas
+- **Flow de provisionamento** dedicado
+- **Controle de acesso** baseado em assinatura
 
-* Subdomain-based tenant routing
-* Logical tenant separation
-* Dedicated provisioning flow
-* Subscription-aware access control
-
-This ensures that Workshop A can never access Workshop B’s operational data — a critical requirement for SaaS compliance, security, and trust.
-
-This architecture enables safe horizontal scaling while preserving centralized administration through the Control Plane.
+**Resultado**: Cada oficina opera em um ambiente completamente isolado, garantindo segurança e conformidade com LGPD/GDPR.
 
 ---
 
-## Database Management
+## 💾 Banco de Dados
 
-WorkshopHub uses **PostgreSQL** as its primary relational database.
+O sistema utiliza **PostgreSQL** como banco de dados primário:
 
-Features include:
-
-* Versioned schema migrations
-* Tenant-aware persistence strategy
-* Initialization scripts for reproducible environments
-* Administrative inspection through pgAdmin
-
-Database setup is supported by:
-
-```text
-db/init.sql
-db/schema.sql
-```
-
----
-
-## Setup
-
-## 1. Clone the repository
+- Migrations versionadas
+- Estratégia de persistência tenant-aware
+- Scripts de inicialização para ambientes reproduzíveis
+- Administração via pgAdmin
 
 ```bash
-git clone https://github.com/your-username/workshophub.git
-cd workshophub
+db/
+├── init.sql      # Inicialização
+└── schema.sql    # Schema principal
 ```
 
 ---
 
-## 2. Start containers
+## 🚀 Quick Start
+
+### Pré-requisitos
+
+- Docker 24.0+
+- Docker Compose 2.20+
+- Git
+
+### Instalação
 
 ```bash
-docker compose up --build
+# 1. Clone o repositório
+git clone https://github.com/your-username/autoflow-pro.git
+cd autoflow-pro
+
+# 2. Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env com suas configurações
+
+# 3. Inicie os containers
+docker compose up --build -d
 ```
 
-This command provisions:
+### Acessos
 
-* PostgreSQL database
-* pgAdmin
-* Django backend API
-* Next.js frontend application
+| Serviço | URL | Descrição |
+|---------|-----|-----------|
+| **Frontend** | http://localhost:3000 | Interface web |
+| **Node API** | http://localhost:3001 | API principal |
+| **Django API** | http://localhost:8000 | Control Plane API |
+| **pgAdmin** | http://localhost:5050 | Admin do banco |
 
-All services run inside an isolated Docker bridge network.
+### Credenciais pgAdmin
 
----
-
-## 3. Access the application
-
-Frontend:
-
-```text
-http://localhost:3000
 ```
-
-Backend API:
-
-```text
-http://localhost:8000
-```
-
-pgAdmin:
-
-```text
-http://localhost:5050
+Email: admin@autoflowpro.com
+Senha: (definida no .env)
 ```
 
 ---
 
-## Development Process
+## 📝 Variáveis de Ambiente
 
-WorkshopHub was not built only as a software product, but also as a complete software engineering project.
+```env
+# Database
+POSTGRES_DB=autoflow_db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=sua_senha_segura
+POSTGRES_PORT=5433
 
-The development lifecycle includes:
+# Backend Node.js
+NODE_API_PORT=3001
+DATABASE_URL=postgresql://postgres:senha@db:5432/autoflow_db
+JWT_SECRET=seu_jwt_secret_minimo_32_chars
 
-### Requirements Engineering
+# Backend Django
+DJANGO_SECRET_KEY=sua_django_secret_key
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=*
 
-* Feasibility Study
-* Functional Documentation
-* Use Case Modeling
-* Requirements Traceability Matrix
-* Database Modeling
-* Business Model Canvas
-
-### Agile Management
-
-* Scrum framework adoption
-* User Story mapping
-* Initial Product Backlog definition
-* Business-driven technical prioritization
-
-This ensured alignment between implementation decisions and business value delivery.
-
----
-
-## Documentation
-
-The `/docs` directory includes:
-
-* Feasibility Study
-* Requirements Survey
-* Use Cases
-* User Stories
-* Product Backlog
-* Scrum Setup
-* Architecture Documentation
-* Database Modeling
-* Traceability Matrix
-* Business Model Canvas
-
-This provides complete project traceability from business conception to technical implementation.
+# Frontend
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_APP_NAME=AutoFlow Pro
+```
 
 ---
 
-## License
+## 📚 Documentação
 
-Private project.
+A documentação completa está disponível no diretório `/docs`:
 
-Internal and academic use only.
+- ✅ Estudo de Viabilidade
+- ✅ Levantamento de Requisitos
+- ✅ Casos de Uso
+- ✅ User Stories
+- ✅ Product Backlog
+- ✅ Setup Scrum
+- ✅ Modelagem de Banco de Dados
+- ✅ Matriz de Rastreabilidade
+- ✅ Business Model Canvas
+
+---
+
+## 🧪 Testes
+
+```bash
+# Backend tests
+cd backend/system
+python manage.py test
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+---
+
+## 🤝 Contribuição
+
+Este é um projeto privado para uso interno e acadêmico.
+
+---
+
+## 📄 Licença
+
+**Projeto Privado** - Uso interno e acadêmico apenas.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido como projeto de engenharia de software com fundamentação sólida em:
+
+- Requirements Engineering
+- Agile Methodologies (Scrum)
+- Clean Architecture
+- DevOps Best Practices
+- Multi-Tenant SaaS Patterns
+
+---
+
+<p align="center">
+  <strong>AutoFlow Pro</strong> - Transformando a gestão de oficinas mecânicas
+  <br />
+  <sub>© 2024 Todos os direitos reservados</sub>
+</p>
