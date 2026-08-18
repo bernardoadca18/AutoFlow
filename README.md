@@ -2,17 +2,17 @@
   🇺🇸 English | 🇧🇷 <a href="./README.pt-BR.md">Português</a>
 </p>
 
-# ControlCar
+# WorkshopHub
 
 ## Overview
 
-**ControlCar** is a B2B multi-tenant SaaS platform designed to modernize and optimize the management of automotive repair shops and mechanical workshops.
+**WorkshopHub** is a B2B multi-tenant SaaS platform designed to modernize and optimize the management of automotive repair shops and mechanical workshops.
 
 Built from the ground up with a strong focus on scalability, security, tenant isolation, and operational efficiency, the platform centralizes the core business workflow — from customer and vehicle registration to service order (Work Order) management, subscription control, and administrative provisioning.
 
 The system follows a hybrid and containerized architecture that clearly separates responsibilities between the frontend experience and backend business logic, ensuring maintainability, reproducibility, and production-ready deployment.
 
-ControlCar was also developed with a strong software engineering foundation, combining traditional requirements engineering with agile product execution using Scrum.
+WorkshopHub was also developed with a strong software engineering foundation, combining traditional requirements engineering with agile product execution using Scrum.
 
 ---
 
@@ -104,7 +104,7 @@ ControlCar was also developed with a strong software engineering foundation, com
 ## Architecture
 
 ```text
-ControlCar
+WorkshopHub
 │
 ├── frontend/
 │   ├── app/
@@ -145,7 +145,7 @@ ControlCar
 
 ## Multi-Tenant Architecture
 
-One of the most critical aspects of ControlCar is its **tenant isolation strategy**.
+One of the most critical aspects of WorkshopHub is its **tenant isolation strategy**.
 
 Each workshop operates as an isolated tenant using:
 
@@ -162,7 +162,7 @@ This architecture enables safe horizontal scaling while preserving centralized a
 
 ## Database Management
 
-ControlCar uses **PostgreSQL** as its primary relational database.
+WorkshopHub uses **PostgreSQL** as its primary relational database.
 
 Features include:
 
@@ -185,8 +185,8 @@ db/schema.sql
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/controlcar.git
-cd controlcar
+git clone https://github.com/your-username/workshophub.git
+cd workshophub
 ```
 
 ---
@@ -232,7 +232,7 @@ http://localhost:5050
 
 ## Development Process
 
-ControlCar was not built only as a software product, but also as a complete software engineering project.
+WorkshopHub was not built only as a software product, but also as a complete software engineering project.
 
 The development lifecycle includes:
 

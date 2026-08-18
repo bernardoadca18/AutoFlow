@@ -36,7 +36,7 @@ export default function LoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md border-t-4 border-blue-500">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-slate-800">ControlCar</h1>
+          <h1 className="text-3xl font-bold text-slate-800">WorkshopHub</h1>
           <p className="text-gray-500">Acesse sua oficina</p>
         </div>
 

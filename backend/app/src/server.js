@@ -3,11 +3,18 @@ const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger_output.json');
+require('dotenv').config();
 
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+const PORT = process.env.PORT || 3001;
+
+// Middleware
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*',
+  credentials: true
+}));
 app.use(express.json());
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
@@ -155,7 +162,8 @@ app.patch('/api/os/:id/finish', async (req, res) => {
     res.json(os);
 });
 
-const PORT = 3001;
 app.listen(PORT, () => {
-    console.log(`Backend nodeJS rodando na porta ${PORT}`);
+    console.log(`WorkshopHub API running on port ${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`API Documentation: http://localhost:${PORT}/doc`);
 });

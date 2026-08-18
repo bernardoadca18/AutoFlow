@@ -11,7 +11,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-slate-800 text-white p-6 hidden md:block">
-      <h1 className="text-2xl font-bold mb-8 text-blue-400">ControlCar</h1>
+      <h1 className="text-2xl font-bold mb-8 text-blue-400">WorkshopHub</h1>
       <nav className="flex flex-col gap-4">
         <Link href="/" className="hover:text-blue-300 transition-colors">
           Dashboard

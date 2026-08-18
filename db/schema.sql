@@ -9,7 +9,7 @@
 -- 
 -- object: control_car_db | type: DATABASE --
 -- DROP DATABASE IF EXISTS control_car_db;
-CREATE DATABASE control_car_db;
+CREATE DATABASE workshophub_db;
 -- ddl-end --
 
 

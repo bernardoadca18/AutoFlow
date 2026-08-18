@@ -162,7 +162,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'ControlCar SaaS Control Plane API',
+    'TITLE': 'WorkshopHub SaaS Control Plane API',
     'DESCRIPTION': 'API para gerenciamento de Tenants, Planos e Usuários Administrativos.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
