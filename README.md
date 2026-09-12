@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Django-5.2-green" alt="Django">
 </p>
 
+
 <p align="center">
   English | <a href="./README.pt-BR.md">Português</a>
 </p>
